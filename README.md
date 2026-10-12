@@ -6,7 +6,7 @@
 
 ## Description
 
-Write your project description here.
+First project in react vite
 
 ## New Topic in this project
 
