@@ -8,11 +8,12 @@
 
 Write your project description here.
 
-## Technologies
+## New Topic in this project
 
-- HTML
-- Tailwind CSS
-- JavaScript
+- React router
+- React DOM
+- Props
+- useState (Hook)
 
 ## Features
 
