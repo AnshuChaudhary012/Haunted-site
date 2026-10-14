@@ -1,75 +1,41 @@
-import c1 from "../assets/images/c1.png";
-import c2 from "../assets/images/c2.png";
-import c3 from "../assets/images/c3.png";
-import c4 from "../assets/images/c4.png";
-import c5 from "../assets/images/c5.png";
-import c6 from "../assets/images/c6.png";
-
-const CARDS_DATA = [
-  {
-    img: c1,
-    title: "ART COLLECTION",
-    desc: "Complete the art collection in full with +70 unique traits, and publish our rarity chart on our webpage.",
-    heightClass: "",
-  },
-  {
-    img: c2,
-    title: "SPECIAL BULLIES",
-    desc: "20 Buddybullies {out of 10k} will have a very special and ersonalized resembling of famous people who are into NFTs {those will be available after the minting}.",
-    heightClass: "",
-  },
-  {
-    img: c3,
-    title: "BREEDING",
-    desc: "Our BuddyBullies will not come alone, as we will announce the breeding function after the minting and you will be able to get a PuppyBully { for free}.",
-    heightClass: "",
-  },
-  {
-    img: c4,
-    title: "DIGITALMARKETS",
-    desc: "Communicate with all the digital markets available in the Solana NFT world for getting our collection successfully listed.",
-    heightClass: "",
-  },
-  {
-    img: c5,
-    title: "MERCH",
-    desc: "The team is working on the future merch thet will be available for the community members directly on our webpage.",
-    heightClass: "",
-  },
-  {
-    img: c6,
-    title: "CHARITY",
-    desc: "We will be giving 30% of the royalties to charity permanently and we will keep spending on marketing, promotions and partnership.50% of the riyalties will go back to the community as rewards.",
-    heightClass: "",
-  },
-];
+import { Fragment } from "react";
+import { CARD_DATA_LIST } from "../utils/helper";
 
 export default function CardsSection() {
   return (
-    <section className="cards">
-      <div className="max-w-339.5 w-full mx-auto px-4">
-        <div className="cards-in grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10.25">
-          {CARDS_DATA.map((card, index) => (
-            <div
-              key={index}
-              className={`card w-full min-h-96 p-6 sm:p-8 lg:p-10 rounded-[20px] bg-dark-blue flex flex-col`}
-            >
-              <img
-                className="mb-8 w-[90px] h-auto sm:w-[117px]"
-                src={card.img}
-                alt={card.title}
-                width="117"
-                height="145"
-              />
-              <h3 className="text-2xl sm:text-[30px] mb-5 leading-tight font-normal">
-                {card.title}
-              </h3>
-              <p className="text-base font-normal text-white/90">
-                {card.desc}
-              </p>
-            </div>
-          ))}
-        </div>
+    <section className="phase-two mx-auto max-w-341.5 px-5 pb-32.75 max-lg:pb-20 max-md:pb-15">
+      <div className="row-p-two -m-0.75 flex flex-wrap justify-center gap-x-6 gap-y-10.25">
+        {CARD_DATA_LIST.map((card) => (
+          <article
+            key={card.title}
+            data-aos="zoom-out-up"
+            data-aos-duration="500"
+            data-aos-delay="100"
+            className="w-106.5 min-h-127.75 cursor-pointer rounded-[20px] bg-space-blue p-[39px_39px_34px_40px] max-xl:relative max-lg:flex max-lg:w-full max-lg:max-w-[90%] max-lg:flex-col max-lg:items-center max-sm:min-h-0 max-sm:max-w-full bg-dark-blue"
+          >
+            <img
+              className="h-auto w-29.25"
+              src={card.image}
+              alt={card.title}
+              width="117"
+              height="145"
+            />
+            <h2 className="mb-6.25 mt-11 text-3xl font-semibold leading-100 text-white max-md:my-5 max-md:text-2xl ">
+              {card.title}
+            </h2>
+            <p className="text-xl whitespace-pre-line font-medium leading-150 text-white/70 max-lg:text-center max-md:text-base">
+              {/* {Array.isArray(card.description)
+                ? card.description.map((line, index) => (
+                    <Fragment key={line}>
+                      {index > 0 && <br />}
+                      {line}
+                    </Fragment>
+                  )) */}
+              {/* : */}
+              {card.description}
+            </p>
+          </article>
+        ))}
       </div>
     </section>
   );

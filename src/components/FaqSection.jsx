@@ -1,26 +1,6 @@
 import { useState } from "react";
-const FAQ_ITEMS = [
-  {
-    question: "What’s the blockchain the buddybullies call home?",
-    answer:
-      "Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus mattis adipiscing ornare arcu vitae enim. Proin turpis enim egestas sed in accumsan, feugiat neque turpis.",
-  },
-  {
-    question: "What’s the blockchain the buddybullies call home?",
-    answer:
-      "Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus mattis adipiscing ornare arcu vitae enim. Proin turpis enim egestas sed in accumsan, feugiat neque turpis.",
-  },
-  {
-    question: "What’s the blockchain the buddybullies call home?",
-    answer:
-      "Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus mattis adipiscing ornare arcu vitae enim. Proin turpis enim egestas sed in accumsan, feugiat neque turpis.",
-  },
-  {
-    question: "What’s the blockchain the buddybullies call home?",
-    answer:
-      "Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus mattis adipiscing ornare arcu vitae enim. Proin turpis enim egestas sed in accumsan, feugiat neque turpis.",
-  },
-];
+import { NavbarIcon } from "../common/Icons";
+import { FAQ_ITEMS } from "../utils/helper";
 export default function FaqSection() {
   // Index 0 is initially open matching the original HTML
   const [openIndex, setOpenIndex] = useState(0);
@@ -29,7 +9,9 @@ export default function FaqSection() {
   };
   return (
     <section id="faq" className="faq">
-      <h2 className="text-4xl sm:text-[50px] text-center mb-8 sm:mb-11.75 font-normal">FAQs</h2>
+      <h2 className="text-4xl sm:text-[50px] text-center mb-8 sm:mb-11.75 font-normal">
+        FAQs
+      </h2>
       <div className="faq-wrapper max-w-207.5 mx-auto flex flex-col gap-6.5 px-4">
         {FAQ_ITEMS.map((item, idx) => {
           const isOpen = openIndex === idx;
@@ -46,28 +28,21 @@ export default function FaqSection() {
                 <span className="text-base sm:text-20 font-medium leading-120">
                   {item.question}
                 </span>
-                <svg
-                  className={`faq-icon w-5 h-5 shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                    }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m6 9 6 6 6-6"
-                  />
-                </svg>
+                <NavbarIcon
+                  name="chevronDown"
+                  className={`faq-icon w-5 h-5 shrink-0 transition-transform duration-300 ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               <div
                 id={`faq-answer-${idx}`}
                 role="region"
                 aria-labelledby={`faq-question-${idx}`}
                 onClick={() => toggleFaq(idx)}
-                className={`faq-answer px-7.5 pt-5 pb-5 cursor-pointer ${isOpen ? "" : "hidden"
-                  }`}
+                className={`faq-answer px-7.5 pt-5 pb-5 cursor-pointer ${
+                  isOpen ? "" : "hidden"
+                }`}
               >
                 <p className="text-white/60 leading-relaxed text-sm">
                   {item.answer}

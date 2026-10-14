@@ -1,25 +1,5 @@
 import roadmapLine from "../assets/images/roadmap-line.svg";
-
-const ROADMAP_ITEMS = [
-  {
-    id: "launch",
-    quarter: "Q-1, 2022",
-    desc: "Blandit sed penatibus elit tortor fermentum velit donec. Id eleifend volutpat dolor netus auctor at. Volutpat sed auctor non in commodo, felis viverra risus tristique.",
-    isReversed: true,
-  },
-  {
-    id: "community",
-    quarter: "Q-4, 2021",
-    desc: "Blandit sed penatibus elit tortor fermentum velit donec. Id eleifend volutpat dolor netus auctor at. Volutpat sed auctor non in commodo, felis viverra risus tristique.",
-    isReversed: false,
-  },
-  {
-    id: "growth",
-    quarter: "Q-1, 2022",
-    desc: "Blandit sed penatibus elit tortor fermentum velit donec. Id eleifend volutpat dolor netus auctor at. Volutpat sed auctor non in commodo, felis viverra risus tristique.",
-    isReversed: true,
-  },
-];
+import { ROADMAP_ITEMS } from "../utils/helper";
 
 export default function RoadmapSection() {
   return (
@@ -63,7 +43,7 @@ export default function RoadmapSection() {
               </p>
             </div>
 
-            <span className="absolute size-10 sm:size-16.25 bg-blue/10 rounded-full left-4 md:left-1/2 top-0 md:top-1/2 -translate-x-1/2 md:-translate-y-1/2">
+            <span className="absolute size-10 sm:size-16.25 bg-blue/10 rounded-full left-4 md:left-1/2 top-0 md:top-1/4 -translate-x-1/2 md:-translate-y-1/2">
               <span className="bg-blue size-6 sm:size-10.75 absolute rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-[3.23px] border-white" />
             </span>
           </div>

@@ -1,5 +1,21 @@
-import AppRoutes from "./routes/AppRoutes";
+import { useEffect } from "react";
+import AOS from "aos";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Home from "./pages/Home";
 
 export default function App() {
-  return <AppRoutes />;
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
