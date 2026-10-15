@@ -1,20 +1,15 @@
 import { useEffect, useState } from "react";
 import { NavbarIcon } from "../common/Icons";
 import { NAV_LINKS } from "../utils/helper";
-
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   useEffect(() => {
     if (!isMenuOpen) return;
-
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-
     function handleKeyDown(event) {
       if (event.key === "Escape") setIsMenuOpen(false);
     }
-
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
@@ -53,7 +48,6 @@ function Navbar() {
           <NavbarIcon name="menu" />
         </button>
       </nav>
-
       {isMenuOpen && (
         <button
           type="button"
@@ -91,8 +85,7 @@ function Navbar() {
                   className="block"
                   style={{ lineHeight: "27px", height: "27px" }}
                   href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                  onClick={() => setIsMenuOpen(false)}>
                   {link.label}
                 </a>
               </li>
