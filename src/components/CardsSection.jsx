@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { CARD_DATA_LIST } from "../utils/helper";
 
 export default function CardsSection() {
@@ -24,14 +23,6 @@ export default function CardsSection() {
               {card.title}
             </h2>
             <p className="text-xl whitespace-pre-line font-medium leading-150 text-white/70 max-lg:text-center max-md:text-base">
-              {/* {Array.isArray(card.description)
-                ? card.description.map((line, index) => (
-                    <Fragment key={line}>
-                      {index > 0 && <br />}
-                      {line}
-                    </Fragment>
-                  )) */}
-              {/* : */}
               {card.description}
             </p>
           </article>

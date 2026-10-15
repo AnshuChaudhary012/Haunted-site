@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             <a
               href={`mailto:${FOOTER_CONTENT.email}`}
-              className="text-white hover:text-blue transition-colors underline"
+              className="text-white hover:text-blue transition-colors "
             >
               {FOOTER_CONTENT.email}
             </a>

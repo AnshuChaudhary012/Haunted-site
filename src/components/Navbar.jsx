@@ -6,19 +6,20 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (!isMenuOpen) return undefined;
+    if (!isMenuOpen) return;
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
-    const closeOnEscape = (event) => {
+    function handleKeyDown(event) {
       if (event.key === "Escape") setIsMenuOpen(false);
-    };
+    }
 
-    window.addEventListener("keydown", closeOnEscape);
+    window.addEventListener("keydown", handleKeyDown);
+
     return () => {
       document.body.style.overflow = previousOverflow;
-      window.removeEventListener("keydown", closeOnEscape);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isMenuOpen]);
 
