@@ -20,15 +20,15 @@ function Navbar() {
 
   return (
     <header className="pt-6">
-      <nav className="relative flex justify-between section-container">
-        <div className="text-white font-semibold text-xl leading-8">Logo</div>
+      <nav data-aos="fade-down" className="relative flex justify-between section-container">
+        <div className="text-white font-semibold text-xl leading-8 cursor-pointer">Logo</div>
         {/* Desktop links */}
         <ul className="hidden md:flex gap-20 text-lg text-white">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="block transition-colors hover:text-blue"
+                className="link-underline block transition-colors hover:text-blue"
                 style={{ lineHeight: "27px", height: "27px" }}
               >
                 {link.label}
@@ -39,7 +39,7 @@ function Navbar() {
         {/* Mobile menu button */}
         <button
           type="button"
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-white text-2xl cursor-pointer"
           aria-label="Open navigation menu"
           aria-controls="mobile-menu"
           aria-expanded={isMenuOpen}
@@ -51,9 +51,9 @@ function Navbar() {
       {isMenuOpen && (
         <button
           type="button"
-          aria-label="Close navigation menu"
+          aria-label="Close navigation menu "
           tabIndex={-1}
-          className="fixed inset-0 z-40 bg-black/60 md:hidden"
+          className="fixed inset-0 z-40 bg-black/60 md:hidden cursor-pointer"
           onClick={() => setIsMenuOpen(false)}
         />
       )}
@@ -67,10 +67,10 @@ function Navbar() {
         inert={!isMenuOpen}
       >
         <div className="mb-10 flex items-center justify-between">
-          <span className="text-xl font-semibold">Logo</span>
+          <span className="text-xl font-semibold cursor-pointer">Logo</span>
           <button
             type="button"
-            className="text-white"
+            className="text-white cursor-pointer"
             aria-label="Close navigation menu"
             onClick={() => setIsMenuOpen(false)}
           >
@@ -78,11 +78,11 @@ function Navbar() {
           </button>
         </div>
         <nav aria-label="Mobile navigation">
-          <ul className="flex flex-col gap-5">
+          <ul className="flex flex-col gap-5 items-center mt-22">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
-                  className="block"
+                  className="link-underline block"
                   style={{ lineHeight: "27px", height: "27px" }}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}>

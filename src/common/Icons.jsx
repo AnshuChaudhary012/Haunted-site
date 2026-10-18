@@ -8,8 +8,7 @@ const icons = {
       focusable="false"
       height="24"
       viewBox="0 0 24 24"
-      width="24"
-    >
+      width="24">
       <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
     </svg>
   ),
@@ -43,7 +42,6 @@ const icons = {
     </svg>
   ),
 };
-
 export function NavbarIcon({ name, ...props }) {
   const icon = icons[name];
   return icon ? cloneElement(icon, props) : null;

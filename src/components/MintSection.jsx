@@ -5,7 +5,7 @@ export default function MintSection() {
   return (
     <section id="minting" className="coming-soon pt-6.5 pb-20 lg:pb-31.75">
       <div className="max-w-302.5 w-full mx-auto px-4 flex justify-between flex-col lg:flex-row max-lg:gap-5 max-lg:items-center">
-        <div className="left max-lg:max-w-fit">
+        <div className="left max-w-70 lg:max-w-143.5" data-aos="fade-right">
           <img
             src={csImg}
             alt="img_for_sec_section"
@@ -14,7 +14,7 @@ export default function MintSection() {
             className="w-full max-w-143.5 h-auto "
           />
         </div>
-        <div className="right w-full max-w-84.5 mt-32.5">
+        <div className="right w-full lg:max-w-84.5 lg:mt-32.5 max-w-70" data-aos="fade-left">
           <h2 className="text-3xl sm:text-[42px] lg:text-[50px] font-semibold mb-8 lg:mb-12 leading-136">
             {MINT_CONTENT.heading}
           </h2>
@@ -44,6 +44,7 @@ export default function MintSection() {
                 href={socialLink.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="cursor-pointer"
                 aria-label={
                   socialLink.label === "X" ? "X / Twitter" : socialLink.label
                 }

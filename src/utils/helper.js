@@ -1,53 +1,58 @@
-import c1 from "../assets/images/c1.png";
-import c2 from "../assets/images/c2.png";
-import c3 from "../assets/images/c3.png";
-import c4 from "../assets/images/c4.png";
-import c5 from "../assets/images/c5.png";
-import c6 from "../assets/images/c6.png";
+import { createElement } from "react";
+import artCollectionImage from "../assets/images/c1.png";
+import specialBulliesImage from "../assets/images/c2.png";
+import breedingImage from "../assets/images/c3.png";
+import digitalMarketsImage from "../assets/images/c4.png";
+import merchImage from "../assets/images/c5.png";
+import charityImage from "../assets/images/c6.png";
 import instaIcon from "../assets/images/insa.svg";
 import xIcon from "../assets/images/x.svg";
 import discordIcon from "../assets/images/discord.svg";
-import t1 from "../assets/images/t1.png";
-import t2 from "../assets/images/t2.png";
-import t3 from "../assets/images/t3.png";
+import teamMemberOneImage from "../assets/images/t1.png";
+import teamMemberTwoImage from "../assets/images/t2.png";
+import teamMemberThreeImage from "../assets/images/t3.png";
 
 // Card artwork and descriptions for the cards section.
 export const CARD_DATA_LIST = [
   {
-    image: c1,
+    image: artCollectionImage,
     title: "ART COLLECTION",
     description:
       "Complete the art collection in full with +70 unique traits, and publish our rarity chart on our webpage.",
   },
   {
-    image: c2,
+    image: specialBulliesImage,
     title: "SPECIAL BULLIES",
     description: [
-      "20 Buddybullies {out of 10k} will have a very special and",
-      "personalized resemblance of famous people who are into NFTs",
-      "{those will be available after the minting}.",
+      "20 Buddybullies ",
+      createElement(
+        "span",
+        { className: "", key: "quantity" },
+        "(out of 10,000) will have a very",
+      ),
+      "special and ersonalized resembling of famous people who are into NFTs {those will be available after the minting}.",
     ],
   },
   {
-    image: c3,
+    image: breedingImage,
     title: "BREEDING",
     description:
       "Our BuddyBullies will not come alone, as we will announce the breeding function after the minting and you will be able to get a PuppyBully { for free}.",
   },
   {
-    image: c4,
+    image: digitalMarketsImage,
     title: "DIGITALMARKETS",
     description:
-      "Communicate with all the digital markets available in the Solana NFT world for getting our collection successfully listed.",
+      "Communicate with all the\n digital markets available in the  Solana NFT world for getting our collection successfully listed.",
   },
   {
-    image: c5,
+    image: merchImage,
     title: "MERCH",
     description:
-      "The team is working on the future merch that will be available for the community members directly on our webpage.",
+      "The team is working on the future merh that will be available for the community members directly on our webpage.",
   },
   {
-    image: c6,
+    image: charityImage,
     title: "CHARITY",
     description:
       "We will be giving 30% of the royalties to charity permanently and will keep spending on marketing, promotions, and partnerships. 50% of the royalties will go back to the community as rewards.",
@@ -86,8 +91,24 @@ export const FAQ_ITEMS = [
   {
     question: "What’s the blockchain the buddybullies call home?",
     answer:
-      "Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus mattis adipiscing ornare arcu vitae enim. Proin turpis enim egestas sed in accumsan, feugiat neque turpis.",
+      "Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus mattis adipiscing ornare arcu vitae enim. Proin turpis enim egestas sed in accumsan, feugiat neque turpis. Fringilla dui donec nullam faucibus vitae non, integer. Non.",
   },
+  {
+    question: "What’s the blockchain the buddybullies call home?",
+    answer:
+      "Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus mattis adipiscing ornare arcu vitae enim. Proin turpis enim egestas sed in accumsan, feugiat neque turpis. Fringilla dui donec nullam faucibus vitae non, integer. Non.",
+  },
+  {
+    question: "What’s the blockchain the buddybullies call home?",
+    answer:
+      "Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus mattis adipiscing ornare arcu vitae enim. Proin turpis enim egestas sed in accumsan, feugiat neque turpis. Fringilla dui donec nullam faucibus vitae non, integer. Non.",
+  },
+  {
+    question: "What’s the blockchain the buddybullies call home?",
+    answer:
+      "Hac varius turpis sit pulvinar lorem magna velit sit. Dapibus mattis adipiscing ornare arcu vitae enim. Proin turpis enim egestas sed in accumsan, feugiat neque turpis. Fringilla dui donec nullam faucibus vitae non, integer. Non.",
+  },
+  
 ];
 
 // Footer resource links and shared social links used by footer and mint sections.
@@ -151,7 +172,7 @@ export const ROADMAP_ITEMS = [
 
 // Team portraits, names, and roles.
 export const TEAM_MEMBERS = [
-  { img: t1, name: "Prime Bullister", role: "Pruduct Designer" },
-  { img: t2, name: "Prime Bullister", role: "Pruduct Designer" },
-  { img: t3, name: "Prime Bullister", role: "Pruduct Designer" },
+  { img: teamMemberOneImage, name: "Prime Bullister", role: "Pruduct Designer" },
+  { img: teamMemberTwoImage, name: "Prime Bullister", role: "Pruduct Designer" },
+  { img: teamMemberThreeImage, name: "Prime Bullister", role: "Pruduct Designer" },
 ];

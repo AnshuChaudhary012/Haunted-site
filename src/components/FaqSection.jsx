@@ -9,14 +9,14 @@ export default function FaqSection() {
   };
   return (
     <section id="faq" className="faq">
-      <h2 className="text-4xl sm:text-[50px] text-center mb-8 sm:mb-11.75 font-normal">
+      <h2 data-aos="fade-up" className="text-4xl sm:text-[50px] text-center mb-8 sm:mb-11.75 font-semibold leading-136">
         FAQs
       </h2>
       <div className="faq-wrapper max-w-207.5 mx-auto flex flex-col gap-6.5 px-4">
         {FAQ_ITEMS.map((item, idx) => {
           const isOpen = openIndex === idx;
           return (
-            <div key={idx} className="faq-item">
+            <div key={idx} data-aos="fade-up" data-aos-delay={Math.min(idx * 80, 400)} className="faq-item">
               <button
                 type="button"
                 onClick={() => toggleFaq(idx)}
