@@ -10,7 +10,7 @@ export default function Footer() {
     <footer
       style={{ backgroundImage: `url(${footerBg})` }}
       data-aos="fade-up"
-      className="bg-center bg-cover bg-no-repeat pt-24 sm:pt-32 lg:pt-44.75 pb-10 sm:pb-14"
+      className="bg-center bg-cover bg-no-repeat pt-24 sm:pt-32 lg:pt-39.75 pb-10 sm:pb-14"
     >
       <div className="max-w-341.25 mx-auto px-4">
         <h2 className="text-4xl sm:text-[50px] text-center font-semibold leading-136">
