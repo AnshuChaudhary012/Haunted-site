@@ -3,7 +3,7 @@ import { ROADMAP_ITEMS } from "../utils/helper";
 
 export default function RoadmapSection() {
   return (
-    <section id="roadmap" className="roadmap pt-20 lg:pt-32.75">
+    <section id="roadmap" className="roadmap">
       <h2 data-aos="fade-up" className="text-4xl sm:text-[50px] text-center mb-12 lg:mb-15.75 font-semibold leading-17">
         Roadmap
       </h2>
