@@ -6,6 +6,33 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26.625rem), 1fr));
+  justify-content: center;
+}
+
+@media (width < 1024px) {
+  .section-main-heading {
+    font-size: clamp(1.875rem, 4vw, 2.5rem);
+  }
+
+  .team-grid > :last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (width < 910px) {
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  }
+
+  .cards-grid > article {
+    min-height: 0;
+    padding: 1.5rem;
+  }
+}
+
 @theme {
   --font-primary: "Poppins", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
@@ -29,12 +56,14 @@ body {
   --leading-100: 100%;
   --leading-120: 120%;
   --leading-150: 150%;
+  --leading-158: 158%;
   --leading-123: 123%;
   --leading-124: 124%;
   --leading-119: 119%;
   --leading-136: 136%;
   --leading-181: 181%;
   --leading-205: 205%;
+
   --blur-500: 500px;
 }
 

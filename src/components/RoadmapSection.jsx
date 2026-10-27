@@ -4,7 +4,7 @@ import { ROADMAP_ITEMS } from "../utils/helper";
 export default function RoadmapSection() {
   return (
     <section id="roadmap" className="roadmap">
-      <h2 data-aos="fade-up" className="text-4xl sm:text-[50px] text-center mb-12 lg:mb-15.75 font-semibold leading-17">
+      <h2 data-aos="fade-up" className="section-main-heading text-4xl sm:text-[50px] text-center mb-12 lg:mb-15.75 font-semibold leading-17">
         Roadmap
       </h2>
       <div className="max-w-238.5 mx-auto px-4">
@@ -27,7 +27,7 @@ export default function RoadmapSection() {
             )}
 
             <div
-              className={`w-full pl-12 md:w-1/2 ${
+              className={`w-full pl-12 sm:pl-24 md:w-1/2 ${
                 item.isReversed
                   ? "md:pl-16 md:pr-0"
                   : "md:pr-16 md:pl-0 md:text-right"

@@ -11,11 +11,11 @@ export default function FaqSection() {
     <section id="faq" className="faq">
       <h2
         data-aos="fade-up"
-        className="text-4xl sm:text-[50px] text-center mb-8 sm:mb-11.75 font-semibold leading-136"
+        className="section-main-heading text-4xl sm:text-[50px] text-center mb-8 sm:mb-11.75 font-semibold leading-136"
       >
         FAQs
       </h2>
-      <div className="faq-wrapper mx-auto flex w-[calc(100%-32px)] max-w-207.5 flex-col gap-5">
+      <div className="faq-wrapper mx-auto flex w-[calc(100%-32px)] max-w-207.5 flex-col gap-6.5">
         {FAQ_ITEMS.map((item, idx) => {
           const isOpen = openIndex === idx;
           return (
@@ -31,7 +31,7 @@ export default function FaqSection() {
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${idx}`}
                 id={`faq-question-${idx}`}
-                className="faq-question max-w-207.5 w-full flex items-center justify-between gap-4 bg-[#06162B] rounded-2xl sm:rounded-full px-5 sm:px-8 py-4 sm:py-5 text-white cursor-pointer text-left transition-all duration-300 hover:bg-[#0a2340] hover:shadow-[0_0_24px_rgba(0,157,255,0.16)] active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/50"
+                className="faq-question max-w-207.5 w-full flex items-center justify-between gap-4 bg-[#06162B] rounded-2xl sm:rounded-full px-5 sm:px-8 py-4 sm:py-5 text-white cursor-pointer text-left max-sm:justify-center max-sm:text-center transition-all duration-300 hover:bg-[#0a2340] hover:shadow-[0_0_24px_rgba(0,157,255,0.16)] active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/50"
               >
                 <span className="font-montserrat leading-120 text-base sm:text-20 font-medium">
                   {item.question}
@@ -48,11 +48,11 @@ export default function FaqSection() {
                 role="region"
                 aria-labelledby={`faq-question-${idx}`}
                 onClick={() => toggleFaq(idx)}
-                className={`faq-answer px-7.5 pt-5 pb-5 cursor-pointer ${
+                className={`faq-answer px-4.5 pt-5 -mb-1.5 cursor-pointer ${
                   isOpen ? "" : "hidden"
                 }`}
               >
-                <p className="font-montserrat text-white/60 leading-120 text-base font-medium">
+                <p className="font-montserrat text-white/60 leading-158 text-base font-medium max-sm:text-center">
                   {item.answer}
                 </p>
               </div>

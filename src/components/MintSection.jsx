@@ -14,7 +14,7 @@ export default function MintSection() {
             className="w-full max-w-143.5 h-auto"
           />
         </div>
-        <div className="right w-full max-w-143.5 md:w-1/2 lg:max-w-84.5 lg:mt-32.5" data-aos="fade-left">
+        <div className="right w-full max-w-143.5 md:w-1/2 lg:max-w-84.5 lg:mt-32.5 max-sm:text-center" data-aos="fade-left">
           <h2 className="text-3xl sm:text-[42px] lg:text-[50px] font-semibold mb-8 lg:mb-12 leading-136">
             {MINT_CONTENT.heading}
           </h2>
@@ -40,7 +40,7 @@ export default function MintSection() {
               {MINT_CONTENT.buttonLabel}
             </span>
           </button>
-          <div className="svgs flex gap-[23.5px]">
+          <div className="svgs flex gap-[23.5px] max-sm:justify-center">
             {SOCIAL_LINKS.map((socialLink) => (
               <a
                 key={socialLink.label}
