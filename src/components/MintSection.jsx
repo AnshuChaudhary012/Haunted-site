@@ -4,36 +4,39 @@ import { MINT_CONTENT, MINT_PRICES, SOCIAL_LINKS } from "../utils/helper";
 export default function MintSection() {
   return (
     <section id="minting" className="coming-soon pt-6.5 pb-20 lg:pb-31.75">
-      <div className="max-w-302.5 w-full mx-auto px-4 flex justify-between flex-col lg:flex-row max-lg:gap-5 max-lg:items-center">
-        <div className="left max-w-70 lg:max-w-143.5" data-aos="fade-right">
+      <div className="max-w-302.5 w-full mx-auto px-4 flex flex-col items-center gap-8 sm:gap-10 md:flex-row md:gap-8 lg:items-start lg:justify-between lg:gap-0">
+        <div className="left w-full max-w-143.5 md:w-1/2" data-aos="fade-right">
           <img
             src={csImg}
             alt="img_for_sec_section"
             width="574"
             height="574"
-            className="w-full max-w-143.5 h-auto "
+            className="w-full max-w-143.5 h-auto"
           />
         </div>
-        <div className="right w-full lg:max-w-84.5 lg:mt-32.5 max-w-70" data-aos="fade-left">
+        <div className="right w-full max-w-143.5 md:w-1/2 lg:max-w-84.5 lg:mt-32.5" data-aos="fade-left">
           <h2 className="text-3xl sm:text-[42px] lg:text-[50px] font-semibold mb-8 lg:mb-12 leading-136">
             {MINT_CONTENT.heading}
           </h2>
           {MINT_PRICES.map((price) => (
-            <div className="mb-5.25" key={price.label}>
+            <div className="mb-5.25 lg:mb-0" key={price.label}>
               <p className="font-medium text-xl sm:text-[30px] leading-136">
                 {price.label}
               </p>
               <p className="font-normal text-[16px] leading-136 text-white/50 line-through">
                 {price.previousPrice}
               </p>
-            </div>
+            </div>  
           ))}
           <button
             type="button"
-            className="group mt-10 lg:mt-15.75 mb-10 lg:mb-13 text-nowrap cursor-pointer relative h-11 w-37.25 bg-white text-dark overflow-hidden rounded-[23px] text-lg font-semibold leading-100 transition-all duration-300 ease-out border border-transparent hover:-translate-y-1 hover:scale-[1.03] hover:border-white active:translate-y-0 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-4 focus-visible:ring-offset-[#000A1A]"
+            className="group mt-15.75 mb-10 lg:mb-13 inline-flex items-center justify-center text-nowrap cursor-pointer relative px-[19.5px] py-2.25 bg-white text-dark overflow-hidden rounded-[23px] text-lg font-semibold leading-100 transition-all duration-300 ease-out border border-transparent hover:-translate-y-1 hover:scale-[1.03] hover:border-white active:translate-y-0 active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-4 focus-visible:ring-offset-[#000A1A]"
           >
             <span className="absolute left-1/2 top-1/2 h-0 w-0 -translate-x-1/2 -translate-y-1/2 rounded-full bg-dark opacity-0 transition-all duration-500 ease-out group-hover:h-full group-hover:w-full group-hover:opacity-100 group-active:scale-95" />
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+            <span
+              className="relative z-10 inline-block font-primary text-base font-medium transition-colors duration-300 group-hover:text-white"
+              style={{ lineHeight: "24px" }}
+            >
               {MINT_CONTENT.buttonLabel}
             </span>
           </button>

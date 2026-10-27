@@ -19,16 +19,18 @@ function Navbar() {
   }, [isMenuOpen]);
 
   return (
-    <header className="pt-6">
+    <header className="pt-6.5">
       <nav data-aos="fade-down" className="relative flex justify-between section-container">
-        <div className="text-white font-semibold text-xl leading-8 cursor-pointer">Logo</div>
+        <a href="/" className="text-white font-semibold text-[21.74px] leading-150 cursor-pointer">
+          Logo
+        </a>
         {/* Desktop links */}
         <ul className="hidden md:flex gap-20 text-lg text-white">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="link-underline block transition-colors hover:text-blue"
+                className="link-underline block font-medium transition-colors hover:text-blue"
                 style={{ lineHeight: "27px", height: "27px" }}
               >
                 {link.label}
@@ -67,7 +69,13 @@ function Navbar() {
         inert={!isMenuOpen}
       >
         <div className="mb-10 flex items-center justify-between">
-          <span className="text-xl font-semibold cursor-pointer">Logo</span>
+          <a
+            href="/"
+            className="text-[21.74px] leading-150 font-semibold cursor-pointer"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            
+          </a>
           <button
             type="button"
             className="text-white cursor-pointer"
@@ -82,7 +90,7 @@ function Navbar() {
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <a
-                  className="link-underline block"
+                  className="link-underline block font-medium"
                   style={{ lineHeight: "27px", height: "27px" }}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}>

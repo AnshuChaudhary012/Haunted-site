@@ -22,7 +22,11 @@ export default function CardsSection() {
             <h2 className="mb-6.25 mt-11 text-3xl font-semibold leading-100 text-white max-md:my-5 max-md:text-2xl ">
               {card.title}
             </h2>
-            <p className="text-xl whitespace-pre-line font-medium leading-150 text-white/70 max-lg:text-center max-md:text-base">
+            <p
+              className={`text-xl whitespace-pre-line font-medium leading-150 text-white/70 max-lg:text-center max-md:text-base ${
+                idx === 1 ? "max-sm:text-[9px] max-sm:leading-[13px]" : ""
+              }`}
+            >
               {card.description}
             </p>
           </article>

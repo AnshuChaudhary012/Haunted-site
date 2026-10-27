@@ -24,13 +24,13 @@ export const CARD_DATA_LIST = [
     image: specialBulliesImage,
     title: "SPECIAL BULLIES",
     description: [
-      "20 Buddybullies ",
+      "20 Buddyblies ",
       createElement(
         "span",
         { className: "", key: "quantity" },
         "(out of 10,000) will have a very",
       ),
-      "special and ersonalized resembling of famous people who are into NFTs {those will be available after the minting}.",
+      "special and ersonalized resembling of famous people who are into NFTs {those will be available \n after the minting}.",
     ],
   },
   {
@@ -173,6 +173,6 @@ export const ROADMAP_ITEMS = [
 // Team portraits, names, and roles.
 export const TEAM_MEMBERS = [
   { img: teamMemberOneImage, name: "Prime Bullister", role: "Pruduct Designer" },
-  { img: teamMemberTwoImage, name: "Prime Bullister", role: "Pruduct Designer" },
-  { img: teamMemberThreeImage, name: "Prime Bullister", role: "Pruduct Designer" },
+  { img: teamMemberTwoImage, name: "Solvador Bulli", role: "Artist" },
+  { img: teamMemberThreeImage, name: "Meta Bully", role: "Developer" },
 ];

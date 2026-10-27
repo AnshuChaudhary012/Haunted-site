@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 export default function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 100,
       once: true,
     });
   }, []);

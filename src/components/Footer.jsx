@@ -10,10 +10,10 @@ export default function Footer() {
     <footer
       style={{ backgroundImage: `url(${footerBg})` }}
       data-aos="fade-up"
-      className="bg-center bg-cover bg-no-repeat pt-24 sm:pt-32 lg:pt-39.75 pb-10 sm:pb-14"
+      className="bg-center bg-cover bg-no-repeat pt-24 sm:pt-32 lg:pt-55.25 pb-10 sm:pb-14"
     >
       <div className="max-w-341.25 mx-auto px-4">
-        <h2 className="text-4xl sm:text-[50px] text-center font-semibold leading-136">
+        <h2 className="text-4xl sm:text-[50px] text-center font-semibold leading-124">
           {FOOTER_CONTENT.heading}
         </h2>
         <div className="flex justify-between flex-col md:flex-row gap-10">
@@ -31,7 +31,6 @@ export default function Footer() {
               {FOOTER_CONTENT.email}
             </a>
           </div>
-
           <div className="max-w-84 w-full flex justify-between pt-0 md:pt-26.5">
             <div className="flex  justify-between w-full ">
               <div className="flex flex-col gap-2.5">
@@ -55,7 +54,7 @@ export default function Footer() {
                 <p className="text-base font-medium">
                   {FOOTER_CONTENT.communityHeading}
                 </p>
-                <div className="flex gap-4">
+                <div className="flex gap-3.25">
                   {SOCIAL_LINKS.map((socialLink) => (
                     <a
                       key={socialLink.label}

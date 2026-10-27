@@ -29,8 +29,8 @@ export default function RoadmapSection() {
             <div
               className={`w-full pl-12 md:w-1/2 ${
                 item.isReversed
-                  ? "md:pl-10 md:pr-0"
-                  : "md:pr-10 md:pl-0 md:text-right"
+                  ? "md:pl-16 md:pr-0"
+                  : "md:pr-16 md:pl-0 md:text-right"
               }`}
             >
               <h3 className="text-white font-semibold text-xl sm:text-[30px] leading-11.25">
